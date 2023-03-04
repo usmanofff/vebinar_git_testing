@@ -5,11 +5,11 @@ from selenium.webdriver.common.keys import Keys
 
 from time import sleep
 driver = webdriver.Chrome("chromedriver.exe")
-driver.get("https://google.com")
-driver.find_element(
-    By.XPATH, "//input[@title=\"Поиск\"]").send_keys("skylfactory" + Keys.RETURN)
+driver.get("https://internet-cabinet.ru/habarovsk/zhivotnyje-uu/koshki-uu/")
+(driver.find_elements(
+    By.XPATH, "//*[@class=\"it-img\"]"))[1].click()
 
 sleep(2)
+driver.save_screenshot('pet_home.png') 
 
-driver.save_screenshot('sf.png')
 driver.quit()
